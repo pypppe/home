@@ -1,230 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>homepage</title>
-  <style>
-    :root {
-      --bg-dark: #121212;
-      --bg-card: #1c1c1f;
-      --accent: #ff66cc;
-      --accent-glow: #ff99dd;
-      --text-light: #ffffff;
-      --text-muted: #aaa;
-      --radius: 14px;
-      --transition: 0.25s ease;
-      --shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-    }
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTRARUNE - OFFICIAL SITE</title>
+<style>
     body {
-      margin: 0;
-      font-family: "Inter", "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #181818 0%, #0f0f0f 100%);
-      color: var(--text-light);
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #7a1818;
+        color: #000;
     }
 
-    /* Topbar */
-    .topbar {
-      background-color: var(--bg-card);
-      padding: 16px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #2c2c2c;
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .top-img {
+        display: block;
+        margin: 60px auto 0 auto;
+        max-width: 300px;
+        height: auto;
     }
 
-    .topbar a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      transition: var(--transition);
+    /* middle image */
+    .middle-img {
+        display: block;
+        margin: 80px auto;
+        max-width: 80%;
+        height: auto;
     }
 
-    .topbar a:hover {
-      background-color: #2b2b2b;
-      color: var(--accent);
-      box-shadow: 0 0 8px var(--accent-glow);
+    .info-section {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 80px;
+        gap: 60px;
+        flex-wrap: wrap;
     }
 
-    /* Main content */
-    .content {
-      flex: 1;
-      padding: 60px 20px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      animation: fadeIn 0.8s ease;
+    .info-left h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 700;
+        color: #7a1818;
+        line-height: 1.2;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .info-right p {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #333;
     }
 
-    .content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 12px;
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent-glow);
+    .info-left, .info-right {
+        flex: 1 1 45%;
     }
 
-    .content p {
-      margin-bottom: 20px;
-      font-size: 18px;
-      color: var(--text-light);
+    /* footer */
+    footer {
+        background-color: #5c1010;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
     }
 
-    .content p.smaller {
-      opacity: 0.7;
-      font-size: 14px;
-      font-style: italic;
-      margin-top: 15px;
+    footer a {
+        display: inline-block;
+        margin: 5px 15px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
     }
 
-    /* Section headers */
-    .content h2 {
-      font-size: 2rem;
-      margin: 60px 0 25px;
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
+    footer a:hover {
+        color: #ffb3b3;
     }
 
-    .content h2::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -8px;
-      transform: translateX(-50%);
-      width: 60%;
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--accent), transparent);
-      border-radius: 10px;
-    }
+    /* responsive tweaks */
+    @media (max-width: 768px) {
+        .info-section {
+            flex-direction: column;
+            padding: 60px 30px;
+            text-align: center;
+        }
+        .info-left, .info-right {
+            flex: 1 1 100%;
+        }
+        .info-left h2 {
+            margin-bottom: 20px;
+        }
 
-    /* Features */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+        footer a {
+            margin: 8px 10px;
+        }
     }
-
-    .feature {
-      background-color: var(--bg-card);
-      padding: 24px;
-      border-radius: var(--radius);
-      text-align: left;
-      border: 1px solid #333;
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-    }
-
-    .feature:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-      box-shadow: 0 0 10px var(--accent-glow);
-    }
-
-    .feature a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: var(--transition);
-      font-weight: 500;
-    }
-
-    .feature a:hover {
-      text-decoration: underline;
-    }
-
-    /* Links */
-    .links {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    .links a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 10px;
-      transition: var(--transition);
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-      color: var(--accent-glow);
-    }
-
-    /* Footer */
-    .footer {
-      background-color: var(--bg-card);
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: var(--text-muted);
-      border-top: 1px solid #2c2c2c;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <a href="mailto:py@astrarune.com" target="_blank">Contact Me!</a>
-  </div>
 
-  <!-- Main content -->
-  <div class="content">
-    <h1>astrarune</h1>
-    <p>
-      astrarune.com is the network for pyp-related projects.<br />
-      <em>"I make sites and webgames so students at school, home, anywhere can enjoy."</em> – pyp
-    </p>
-    <p class="smaller">rhythm is just a click away!</p>
+    <img src="astra.png" alt="Astra Logo" class="top-img">
 
-    <!-- Features -->
-    <h2>Features</h2>
-    <div class="features">
-      <div class="feature">
-        <strong>🎮 New Webgame:</strong><br />
-        Play <a href="https://unscrub.astrarune.com" target="_blank">unscrub</a> in your browser!
-      </div>
-      <div class="feature">
-        <strong>💖 Support pyp:</strong><br />
-        Visit <a href="https://github.com/pypppe" target="_blank">GitHub</a>.
-      </div>
+    <img src="places.png" alt="Places" class="middle-img">
+
+    <div class="info-section">
+        <div class="info-left">
+            <h2>Who runs Astrarune?</h2>
+        </div>
+        <div class="info-right">
+            <p>Astrarune Network is ran by 1 developer, <strong>pyp</strong>. All their webgames, and even websites are all <strong>open-sourced</strong> at <strong>pypppe @ GitHub</strong>.</p>
+        </div>
     </div>
 
-    <!-- Links -->
-    <h2>Useful Links</h2>
-    <div class="links">
-      <a href="https://help.peppy.astrarune.com" target="_blank">help</a> |
-      <a href="https://github.com/pypppe" target="_blank">github</a>
-    </div>
-  </div>
+    <footer>
+        <a href="https://yo.astrarune.com" target="_blank">Yo!</a>
+        <a href="https://unscrub.astrarune.com" target="_blank">Unscrub</a>
+        <a href="https://home.astrarune.com" target="_blank">Home page</a>
+        <a href="https://peppy.astrarune.com" target="_blank">osu! Downloader</a>
+        <a href="https://help.peppy.astrarune.com" target="_blank">osu! Downloader Help</a>
+        <a href="https://github.com/pypppe" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/@astrarune_network" target="_blank">YouTube</a>
+    </footer>
 
-  <!-- External script -->
-  <script src="https://r1.astrarune.com/blocker.js"></script>
-
-  <!-- Footer -->
-  <div class="footer">
-    &copy; astrarune network · made in the uk
-  </div>
 </body>
 </html>
