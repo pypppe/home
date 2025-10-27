@@ -13,88 +13,89 @@
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #121212;
-        color: #EAEAEA;
+        font-family: 'Inter', sans-serif;
+        background-color: #181818;
+        color: #E6E6E6;
         line-height: 1.6;
         overflow-x: hidden;
-    }
-
-    h1, h2, h3, p {
-        font-family: 'Helvetica Neue', sans-serif;
     }
 
     /* Main Title */
     h1 {
         font-size: 4rem;
-        font-weight: 700;
+        font-weight: 800;
         text-align: center;
         margin-top: 100px;
-        color: #00C8FF; /* Bright cyan for contrast */
-        letter-spacing: 3px;
+        color: #D87F63; /* Elegant warm accent color */
+        letter-spacing: 5px;
     }
 
     /* Info Section */
     .info-section {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 40px;
-        padding: 80px 60px;
+        padding: 100px 60px;
+        gap: 50px;
         text-align: left;
+        margin-top: 80px;
     }
 
     .info-left, .info-right {
-        background-color: #1F1F1F;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        flex: 1 1 45%;
+        background-color: #262626;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        flex: 1;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .info-left:hover, .info-right:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        transform: translateY(-12px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
     }
 
     .info-left h2, .info-right h2 {
-        color: #00C8FF;
+        font-size: 36px;
+        color: #D87F63;
         margin-bottom: 20px;
     }
 
     .info-left p, .info-right p {
-        color: #B0B0B0;
         font-size: 18px;
+        color: #C1C1C1;
     }
 
+    /* Button Styling */
     .button {
         display: inline-block;
-        background-color: #00C8FF;
-        color: #121212;
-        padding: 12px 30px;
+        background-color: #D87F63;
+        color: #181818;
+        padding: 14px 30px;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 6px;
         margin-top: 20px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .button:hover {
-        background-color: #00A0B0;
+        background-color: #C76B51;
+        transform: scale(1.05);
     }
 
     /* Footer */
     footer {
-        background-color: #1F1F1F;
-        color: #B0B0B0;
-        padding: 40px 20px;
+        background-color: #121212;
+        color: #C1C1C1;
+        padding: 60px 20px;
         text-align: center;
         box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
     }
 
     footer a {
-        color: #B0B0B0;
+        color: #C1C1C1;
         text-decoration: none;
         margin: 10px;
         font-weight: 500;
@@ -102,7 +103,7 @@
     }
 
     footer a:hover {
-        color: #00C8FF;
+        color: #D87F63;
     }
 
     /* Responsive Design */
@@ -118,7 +119,7 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
     }
 </style>
@@ -130,11 +131,13 @@
     <div class="info-section">
         <div class="info-left">
             <h2>Who Runs Astrarune?</h2>
-            <p>Astrarune is a community-driven project managed by a single developer, <strong>pyp</strong>. With a passion for web development and gaming, everything is open-sourced on <strong><a href="https://github.com/pypppe" target="_blank" class="button">GitHub</a></strong>.</p>
+            <p>Astrarune is driven by <strong>pyp</strong>, a passionate developer committed to creating open-source games and software. The entire project is hosted on GitHub, inviting contributions from developers all over the world.</p>
+            <a href="https://github.com/pypppe" target="_blank" class="button">View on GitHub</a>
         </div>
         <div class="info-right">
             <h2>Our Mission</h2>
-            <p>We aim to create innovative, web-based games that are open to anyone. With the help of our open-source community, we build new ideas and collaborate on making the web a better space for developers and gamers alike.</p>
+            <p>We aim to build immersive, web-based experiences that engage players and creators alike. Through our open-source community, we foster a space where anyone can contribute and learn, while having fun together.</p>
+            <a href="https://yo.astrarune.com" target="_blank" class="button">Join Us</a>
         </div>
     </div>
 
