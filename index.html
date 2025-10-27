@@ -8,71 +8,75 @@
     body {
         margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #121212;
-        color: #fff;
+        background-color: #1f1f1f;
+        color: #e1e1e1;
         line-height: 1.6;
     }
 
-    h1, h2, h3 {
-        color: #ff4f4f;
-    }
-
     h1 {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 48px;
+        font-size: 60px;
         font-weight: 700;
+        text-align: center;
+        color: #ff4081;
+        margin-top: 100px;
     }
 
     /* Info Section */
     .info-section {
         display: flex;
         justify-content: space-between;
-        padding: 50px 20px;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 20px;
+        padding: 60px 40px;
+        gap: 40px;
+        text-align: left;
     }
 
     .info-left, .info-right {
-        flex: 1 1 45%;
+        flex: 1;
+        background-color: #2c2c2c;
+        padding: 40px;
+        border-radius: 10px;
     }
 
-    .info-left h2 {
-        font-size: 36px;
+    .info-left h2, .info-right h2 {
+        font-size: 32px;
+        color: #ff4081;
         margin-bottom: 20px;
     }
 
-    .info-right p {
+    .info-right p, .info-left p {
         font-size: 18px;
-        color: #ccc;
+        color: #b0b0b0;
+    }
+
+    .info-right p {
+        margin-top: 10px;
     }
 
     /* Footer */
     footer {
-        background-color: #1c1c1c;
-        color: #bbb;
+        background-color: #121212;
+        color: #b0b0b0;
         padding: 40px 20px;
         text-align: center;
     }
 
     footer a {
-        color: #bbb;
+        color: #b0b0b0;
         text-decoration: none;
         font-weight: 500;
-        margin: 0 15px;
+        margin: 10px;
         transition: color 0.3s;
     }
 
     footer a:hover {
-        color: #ff4f4f;
+        color: #ff4081;
     }
 
     /* Buttons */
     .button {
-        background-color: #ff4f4f;
+        background-color: #ff4081;
         color: #fff;
-        padding: 12px 24px;
+        padding: 12px 30px;
         border-radius: 5px;
         text-decoration: none;
         font-weight: 600;
@@ -82,39 +86,40 @@
     }
 
     .button:hover {
-        background-color: #e03e3e;
+        background-color: #e73766;
     }
 
     /* Responsive tweaks */
     @media (max-width: 768px) {
         .info-section {
             flex-direction: column;
-            text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
         .info-left, .info-right {
             flex: 1 1 100%;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 48px;
         }
     }
 </style>
 </head>
 <body>
 
-    <h1>Welcome to Astrarune</h1>
+    <h1>Astrarune Official</h1>
 
     <div class="info-section">
         <div class="info-left">
-            <h2>Who runs Astrarune?</h2>
-            <p>We are a community-driven project created by one developer, <strong>pyp</strong>, whose work is fully open-sourced on <a href="https://github.com/pypppe" target="_blank" class="button">GitHub</a>.</p>
+            <h2>About Astrarune</h2>
+            <p>Astrarune is a project driven by a single developer, <strong>pyp</strong>, who is passionate about building open-source games and software. The entire project is available on GitHub, and we encourage everyone to contribute!</p>
+            <a href="https://github.com/pypppe" target="_blank" class="button">View on GitHub</a>
         </div>
         <div class="info-right">
             <h2>Our Mission</h2>
-            <p>Our mission is to create fun and innovative web-based games, with everything built in an open-source environment, giving everyone the opportunity to contribute and learn.</p>
+            <p>We aim to create fun, web-based games that anyone can enjoy. By embracing open-source, we offer an inclusive platform for others to learn, collaborate, and innovate alongside us. Join the community and explore the possibilities.</p>
         </div>
     </div>
 
@@ -122,8 +127,6 @@
         <a href="https://yo.astrarune.com" target="_blank">Yo!</a>
         <a href="https://unscrub.astrarune.com" target="_blank">Unscrub</a>
         <a href="https://home.astrarune.com" target="_blank">Home Page</a>
-        <a href="https://peppy.astrarune.com" target="_blank">osu! Downloader</a>
-        <a href="https://help.peppy.astrarune.com" target="_blank">osu! Help</a>
         <a href="https://github.com/pypppe" target="_blank">GitHub</a>
         <a href="https://www.youtube.com/@astrarune_network" target="_blank">YouTube</a>
     </footer>
