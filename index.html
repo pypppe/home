@@ -5,95 +5,111 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASTRARUNE - OFFICIAL SITE</title>
 <style>
-    body {
+    /* Base Reset */
+    * {
         margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #1f1f1f;
-        color: #e1e1e1;
-        line-height: 1.6;
+        padding: 0;
+        box-sizing: border-box;
     }
 
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212;
+        color: #EAEAEA;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, p {
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    /* Main Title */
     h1 {
-        font-size: 60px;
+        font-size: 4rem;
         font-weight: 700;
         text-align: center;
-        color: #ff4081;
         margin-top: 100px;
+        color: #00C8FF; /* Bright cyan for contrast */
+        letter-spacing: 3px;
     }
 
     /* Info Section */
     .info-section {
         display: flex;
         justify-content: space-between;
-        padding: 60px 40px;
+        flex-wrap: wrap;
         gap: 40px;
+        padding: 80px 60px;
         text-align: left;
     }
 
     .info-left, .info-right {
-        flex: 1;
-        background-color: #2c2c2c;
+        background-color: #1F1F1F;
         padding: 40px;
-        border-radius: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        flex: 1 1 45%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-left:hover, .info-right:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
     .info-left h2, .info-right h2 {
-        font-size: 32px;
-        color: #ff4081;
+        color: #00C8FF;
         margin-bottom: 20px;
     }
 
-    .info-right p, .info-left p {
+    .info-left p, .info-right p {
+        color: #B0B0B0;
         font-size: 18px;
-        color: #b0b0b0;
     }
 
-    .info-right p {
-        margin-top: 10px;
+    .button {
+        display: inline-block;
+        background-color: #00C8FF;
+        color: #121212;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #00A0B0;
     }
 
     /* Footer */
     footer {
-        background-color: #121212;
-        color: #b0b0b0;
+        background-color: #1F1F1F;
+        color: #B0B0B0;
         padding: 40px 20px;
         text-align: center;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
     }
 
     footer a {
-        color: #b0b0b0;
+        color: #B0B0B0;
         text-decoration: none;
-        font-weight: 500;
         margin: 10px;
-        transition: color 0.3s;
+        font-weight: 500;
+        transition: color 0.3s ease;
     }
 
     footer a:hover {
-        color: #ff4081;
+        color: #00C8FF;
     }
 
-    /* Buttons */
-    .button {
-        background-color: #ff4081;
-        color: #fff;
-        padding: 12px 30px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        display: inline-block;
-        transition: background-color 0.3s;
-        margin-top: 20px;
-    }
-
-    .button:hover {
-        background-color: #e73766;
-    }
-
-    /* Responsive tweaks */
+    /* Responsive Design */
     @media (max-width: 768px) {
         .info-section {
             flex-direction: column;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
         .info-left, .info-right {
@@ -102,7 +118,7 @@
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 3rem;
         }
     }
 </style>
@@ -113,13 +129,12 @@
 
     <div class="info-section">
         <div class="info-left">
-            <h2>About Astrarune</h2>
-            <p>Astrarune is a project driven by a single developer, <strong>pyp</strong>, who is passionate about building open-source games and software. The entire project is available on GitHub, and we encourage everyone to contribute!</p>
-            <a href="https://github.com/pypppe" target="_blank" class="button">View on GitHub</a>
+            <h2>Who Runs Astrarune?</h2>
+            <p>Astrarune is a community-driven project managed by a single developer, <strong>pyp</strong>. With a passion for web development and gaming, everything is open-sourced on <strong><a href="https://github.com/pypppe" target="_blank" class="button">GitHub</a></strong>.</p>
         </div>
         <div class="info-right">
             <h2>Our Mission</h2>
-            <p>We aim to create fun, web-based games that anyone can enjoy. By embracing open-source, we offer an inclusive platform for others to learn, collaborate, and innovate alongside us. Join the community and explore the possibilities.</p>
+            <p>We aim to create innovative, web-based games that are open to anyone. With the help of our open-source community, we build new ideas and collaborate on making the web a better space for developers and gamers alike.</p>
         </div>
     </div>
 
@@ -127,6 +142,8 @@
         <a href="https://yo.astrarune.com" target="_blank">Yo!</a>
         <a href="https://unscrub.astrarune.com" target="_blank">Unscrub</a>
         <a href="https://home.astrarune.com" target="_blank">Home Page</a>
+        <a href="https://peppy.astrarune.com" target="_blank">osu! Downloader</a>
+        <a href="https://help.peppy.astrarune.com" target="_blank">osu! Help</a>
         <a href="https://github.com/pypppe" target="_blank">GitHub</a>
         <a href="https://www.youtube.com/@astrarune_network" target="_blank">YouTube</a>
     </footer>
