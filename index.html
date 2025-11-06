@@ -1,155 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASTRARUNE - OFFICIAL SITE</title>
-<style>
-    /* Base Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #181818;
-        color: #E6E6E6;
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
-
-    /* Main Title */
-    h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        text-align: center;
-        margin-top: 100px;
-        color: #D87F63; /* Elegant warm accent color */
-        letter-spacing: 5px;
-    }
-
-    /* Info Section */
-    .info-section {
-        display: flex;
-        justify-content: space-between;
-        padding: 100px 60px;
-        gap: 50px;
-        text-align: left;
-        margin-top: 80px;
-    }
-
-    .info-left, .info-right {
-        background-color: #262626;
-        padding: 50px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        flex: 1;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .info-left:hover, .info-right:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
-    }
-
-    .info-left h2, .info-right h2 {
-        font-size: 36px;
-        color: #D87F63;
-        margin-bottom: 20px;
-    }
-
-    .info-left p, .info-right p {
-        font-size: 18px;
-        color: #C1C1C1;
-    }
-
-    /* Button Styling */
-    .button {
-        display: inline-block;
-        background-color: #D87F63;
-        color: #181818;
-        padding: 14px 30px;
-        text-decoration: none;
-        border-radius: 6px;
-        margin-top: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .button:hover {
-        background-color: #C76B51;
-        transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-        background-color: #121212;
-        color: #C1C1C1;
-        padding: 60px 20px;
-        text-align: center;
-        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    footer a {
-        color: #C1C1C1;
-        text-decoration: none;
-        margin: 10px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-        color: #D87F63;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .info-section {
-            flex-direction: column;
-            padding: 60px 20px;
-        }
-
-        .info-left, .info-right {
-            flex: 1 1 100%;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-        }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrarune</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <h1>Astrarune Official</h1>
-
-    <div class="info-section">
-        <div class="info-left">
-            <h2>Who Runs Astrarune?</h2>
-            <p>Astrarune is driven by <strong>pyp</strong>, a passionate developer committed to creating open-source games and software. The entire project is hosted on GitHub, inviting contributions from developers all over the world.</p>
-            <a href="https://github.com/pypppe" target="_blank" class="button">View on GitHub</a>
-        </div>
-        <div class="info-right">
-            <h2>Our Mission</h2>
-            <p>We aim to build immersive, web-based experiences that engage players and creators alike. Through our open-source community, we foster a space where anyone can contribute and learn, while having fun together.</p>
-            <a href="https://yo.astrarune.com" target="_blank" class="button">Join Us</a>
+    <div class="container">
+        <h1 class="logo">astrarune</h1>
+        <p class="description">Welcome to the official astrarune website, we are responsible for making Unscrub, Yo!, and more.</p>
+        <div class="buttons">
+            <a class="btn" href="https://unscrub.astrarune.com" target="_blank">Unscrub</a>
+            <a class="btn" href="https://yo.astrarune.com" target="_blank">Yo! <span class="discontinued">Discontinued!</span></a>
         </div>
     </div>
-
-    <footer>
-        <a href="https://yo.astrarune.com" target="_blank">Yo!</a>
-        <a href="https://unscrub.astrarune.com" target="_blank">Unscrub</a>
-        <a href="https://home.astrarune.com" target="_blank">Home Page</a>
-        <a href="https://peppy.astrarune.com" target="_blank">osu! Downloader</a>
-        <a href="https://help.peppy.astrarune.com" target="_blank">osu! Help</a>
-        <a href="https://github.com/pypppe" target="_blank">GitHub</a>
-        <a href="https://www.youtube.com/@astrarune_network" target="_blank">YouTube</a>
-    </footer>
-
 </body>
 </html>
