@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Darker background */
     color: white;
-    height: 200vh;
+    height: 200vh; /* Ensure content requires scrolling */
 }
 
 .main-container {
@@ -39,14 +39,14 @@ header h1 {
     margin-top: 30px;
 }
 
-.game-item {
+.game-item, .x-item {
     display: inline-block;
     position: relative;
     margin: 0 20px;
 }
 
-.game-item img {
-    max-width: 400px;
+.game-item img, .x-item img {
+    max-width: 400px;  /* Same size for all images */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
@@ -67,11 +67,6 @@ header h1 {
 
 .x-items {
     margin-top: 20px;
-}
-
-.x-item img {
-    max-width: 200px;
-    margin: 0 15px;
 }
 
 footer {
