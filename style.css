@@ -35,7 +35,7 @@ header h1 {
     margin-top: 50px;
 }
 
-.game-section, .social-section {
+.game-section {
     margin-top: 30px;
 }
 
@@ -63,6 +63,11 @@ header h1 {
 
 .right {
     float: right;
+}
+
+/* Social Section (Initially hidden until scrolled into view) */
+.social-section {
+    margin-top: 100vh; /* Push this section far enough down the page to require scrolling */
 }
 
 .x-items {
