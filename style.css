@@ -65,9 +65,21 @@ header h1 {
     float: right;
 }
 
-/* Social Section (Initially hidden until scrolled into view) */
+/* Scroll down prompt */
+.scroll-down-prompt {
+    height: 100vh;  /* Make the prompt take up the entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.5;
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+}
+
 .social-section {
-    margin-top: 100vh; /* Push this section far enough down the page to require scrolling */
+    margin-top: 50px; /* Pushed down after the scroll prompt */
 }
 
 .x-items {
